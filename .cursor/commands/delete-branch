@@ -1,0 +1,56 @@
+## Command Usage
+
+When a user says:
+
+- "run delete branch"
+
+Execute commands with proper permissions.
+
+### run delete branch
+
+Safely deletes a local git branch after confirming it has been reviewed and merged.
+
+**Steps:**
+
+1. Check current branch:
+
+   - Run `git branch --show-current` to see which branch you're on
+   - Display the current branch name to the user
+
+2. Ask for confirmation:
+
+   - Ask the user: "Was this branch successfully reviewed and merged? If so, congratulations! 🎉 Please say 'Yes' if you'd like to delete this branch on your local machine now, as it's no longer needed. 'No' to cancel."
+   - Wait for user response
+
+3. If user confirms "Yes" (or similar affirmative response):
+
+   - Ask which branch they want to delete (if not already clear from context)
+   - If user wants to delete the current branch:
+     - Switch to main branch first with `git checkout main`
+     - Explain: "Switching to main first since you can't delete the branch you're currently on"
+
+4. Delete the branch:
+   - Run `git branch -d [branch-name]` to safely delete the branch
+   - If deletion fails with error (branch not fully merged):
+     - Inform user the branch may not be fully merged
+     - Ask if they want to force delete with `git branch -D [branch-name]`
+     - Only proceed with force delete if user explicitly confirms
+
+<!-- #. Optional - Delete remote branch:
+
+   - Ask user: "Would you also like to delete this branch from the remote repository?"
+   - If yes, run `git push origin --delete [branch-name]`
+   - Confirm successful deletion -->
+
+5. Verify deletion:
+   - Run `git branch` to show remaining local branches
+   - Confirm the branch no longer appears in the list
+
+**Important notes:**
+
+- Always confirm the branch has been merged before deleting
+- Use `-d` flag for safe deletion (prevents deleting unmerged branches)
+- Use `-D` flag only when user explicitly confirms force deletion
+- Cannot delete the currently checked out branch - must switch first
+- Deleting local branch does NOT automatically delete the remote branch
+- If branch wasn't merged, recommend pushing/merging before deletion
