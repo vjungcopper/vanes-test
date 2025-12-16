@@ -63,6 +63,45 @@ npm run build
 - Feature 2
 - Feature 3
 
+## Cursor Commands
+
+### run create new branch
+
+This repository includes a custom Cursor command to streamline the git branching workflow. The command automates the process of safely creating a new branch while ensuring your current work is saved and your main branch is up to date.
+
+#### Usage
+
+In Cursor, simply type or say:
+
+```
+run create new branch
+```
+
+Or invoke it through Cursor's command interface by typing the command name.
+
+#### What it does
+
+The command follows these steps automatically:
+
+1. **Check current branch** - Shows your current git branch status
+2. **Save current work** (if not on main):
+   - Detects uncommitted changes and prompts to commit them
+   - Checks if branch has unpushed changes
+   - Offers to push changes to remote
+3. **Switch to main** - Checks out the main branch
+4. **Update main** - Fetches and pulls the latest changes from origin/main
+5. **Create new branch** - Prompts for a branch name and creates it
+6. **Verify** - Confirms successful branch creation
+
+#### How it works
+
+The command is defined in `.cursorrules` and Cursor AI will execute the workflow by:
+
+- Running the appropriate git commands in sequence
+- Prompting you for input when needed (commit messages, branch names)
+- Handling edge cases (uncommitted changes, unpushed commits, etc.)
+- Providing clear feedback at each step
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
