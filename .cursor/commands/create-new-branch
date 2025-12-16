@@ -51,3 +51,5 @@ Creates a new git branch following best practices: saves current work, updates m
 - Always update main before creating a new branch from it
 - Validate that the branch name is not empty and doesn't already exist
 - Provide clear feedback at each step
+- When pushing:
+  - **Permissions Required:** `all` - Git push requires full system access to authenticate with GitHub (access to macOS Keychain, SSH agents, and credential helpers)

@@ -54,3 +54,5 @@ Pushes changes to the current branch with proper git workflow: checks for change
 - The first push on a new branch requires setting upstream
 - If conflicts occur during push, inform user to pull first with `git pull --rebase`
 - Always confirm each step completed successfully before proceeding
+- When pushing:
+  - **Permissions Required:** `all` - Git push requires full system access to authenticate with GitHub (access to macOS Keychain, SSH agents, and credential helpers)
