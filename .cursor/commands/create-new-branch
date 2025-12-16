@@ -37,7 +37,8 @@ Creates a new git branch following best practices: saves current work, updates m
 
 5. Create new branch:
 
-   - Ask user for the new branch name
+   - Ask user for the new branch
+     - If user enters the new branch name with spacing, automatically fill the spacing with "-" (hyphens) in the name to pass the ref format requirement.
    - Run `git checkout -b [new-branch-name]`
 
 6. Verify the branch was created:
