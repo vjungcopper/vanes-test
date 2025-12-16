@@ -40,7 +40,7 @@ Pushes changes to the current branch with proper git workflow: checks for change
    - If the push fails with upstream error (typically "no upstream branch"):
      - The error message will suggest: `git push --set-upstream origin [branch-name]`
      - Automatically extract the branch name from the error or use the current branch
-     - Run `git push --set-upstream origin [branch-name]`
+     - Automatically run `git push --set-upstream origin [branch-name]`
      - Confirm successful push
 
 5. Verify push was successful:
