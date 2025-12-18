@@ -1,0 +1,57 @@
+/**
+ * Avatar Component Styles
+ * Import design tokens from design-tokens.scss
+ */
+
+@use 'design-tokens' as tokens;
+
+// Avatar size configuration map
+$avatar-sizes: (
+  16: tokens.$scale-4,
+  20: tokens.$scale-5,
+  24: tokens.$scale-6,
+  32: tokens.$scale-8,
+  40: tokens.$scale-10,
+  48: tokens.$scale-12,
+  56: tokens.$scale-14,
+  64: tokens.$scale-16
+);
+
+// Base avatar styles
+.avatar {
+  position: relative;
+  display: inline-block;
+
+  // Size variants using design tokens
+  @each $size, $value in $avatar-sizes {
+    &--size-#{$size} {
+      width: $value;
+      height: $value;
+    }
+  }
+}
+
+// Avatar Image
+.avatar-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: 100px;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: 50% 50%;
+    pointer-events: none;
+  }
+}

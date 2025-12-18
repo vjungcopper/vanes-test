@@ -1,0 +1,73 @@
+/* Avatar Component Styles */
+/* Import design tokens from design-tokens.css */
+
+.avatar {
+  position: relative;
+  display: inline-block;
+}
+
+/* Size variants using design tokens */
+.avatar--size-16 {
+  width: var(--scale-4);
+  height: var(--scale-4);
+}
+
+.avatar--size-20 {
+  width: var(--scale-5);
+  height: var(--scale-5);
+}
+
+.avatar--size-24 {
+  width: var(--scale-6);
+  height: var(--scale-6);
+}
+
+.avatar--size-32 {
+  width: var(--scale-8);
+  height: var(--scale-8);
+}
+
+.avatar--size-40 {
+  width: var(--scale-10);
+  height: var(--scale-10);
+}
+
+.avatar--size-48 {
+  width: var(--scale-12);
+  height: var(--scale-12);
+}
+
+.avatar--size-56 {
+  width: var(--scale-14);
+  height: var(--scale-14);
+}
+
+.avatar--size-64 {
+  width: var(--scale-16);
+  height: var(--scale-16);
+}
+
+/* Avatar Image */
+.avatar-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: 100px;
+}
+
+.avatar-image__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: 50% 50%;
+  pointer-events: none;
+}

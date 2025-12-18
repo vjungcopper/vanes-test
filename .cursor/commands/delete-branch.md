@@ -43,8 +43,13 @@ Safely deletes a local git branch after confirming it has been reviewed and merg
    - Confirm successful deletion -->
 
 5. Verify deletion:
+
    - Run `git branch` to show remaining local branches
    - Confirm the branch no longer appears in the list
+
+6. Pull changes to main:
+   - Run `git pull` to pull any changes (presuming that the branch was merged to main)
+   - Confirm the main branch is up to date
 
 **Important notes:**
 

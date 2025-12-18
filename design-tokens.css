@@ -1,0 +1,50 @@
+/**
+ * Design Tokens - Alloy Design System V2.1
+ * 
+ * These tokens are synced from Figma and should be used throughout the application
+ * for consistent sizing, spacing, colors, and typography.
+ */
+
+:root {
+  /* Scale Tokens - Sizing & Spacing */
+  --scale-4: 16px;   /* $scale-4 */
+  --scale-5: 20px;   /* $scale-5 */
+  --scale-6: 24px;   /* $scale-6 */
+  --scale-8: 32px;   /* $scale-8 */
+  --scale-10: 40px;  /* $scale-10 */
+  --scale-12: 48px;  /* $scale-12 */
+  --scale-14: 56px;  /* $scale-14 */
+  --scale-16: 64px;  /* $scale-16 */
+
+  /* Color Tokens - Indigo */
+  --indigo-0: #dee3ff;  /* Indigo/Indigo 0 */
+  --indigo-9: #0c1647;  /* Indigo/Indigo 9 */
+
+  /* Font Tokens - Family */
+  --font-family-default: "Inter";  /* Font/Family/Default */
+
+  /* Font Tokens - Size */
+  --font-size-smallest: 12px;  /* Font/Size/Smallest */
+  --font-size-small: 14px;     /* Font/Size/Small */
+  --font-size-default: 16px;   /* Font/Size/Default */
+  --font-size-h4: 22px;        /* Font/Size/H4 */
+  --font-size-h3: 24px;        /* Font/Size/H3 */
+  --font-size-h2: 30px;        /* Font/Size/H2 */
+
+  /* Font Tokens - Weight */
+  --font-weight-semi-bold: 600;  /* Font/Weight/Semi Bold */
+
+  /* Font Tokens - Letter Spacing */
+  --font-letter-spacing-default: 0;       /* Font/Letter Spacing/Default */
+  --font-letter-spacing-tight: -0.4px;    /* Font/Letter Spacing/Tight */
+}
+
+/**
+ * Usage Examples:
+ * 
+ * width: var(--scale-8);
+ * padding: var(--scale-4) var(--scale-6);
+ * font-size: var(--font-size-default);
+ * font-family: var(--font-family-default);
+ * color: var(--indigo-9);
+ */

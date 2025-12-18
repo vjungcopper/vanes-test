@@ -1,0 +1,113 @@
+/**
+ * Design Tokens - Alloy Design System V2.1
+ * 
+ * These tokens are synced from Figma and should be used throughout the application
+ * for consistent sizing, spacing, colors, and typography.
+ */
+
+// Scale Tokens - Sizing & Spacing
+$scale-4: 16px;   // Figma: $scale-4
+$scale-5: 20px;   // Figma: $scale-5
+$scale-6: 24px;   // Figma: $scale-6
+$scale-8: 32px;   // Figma: $scale-8
+$scale-10: 40px;  // Figma: $scale-10
+$scale-12: 48px;  // Figma: $scale-12
+$scale-14: 56px;  // Figma: $scale-14
+$scale-16: 64px;  // Figma: $scale-16
+
+// Scale Map for programmatic access
+$scale-map: (
+  4: $scale-4,
+  5: $scale-5,
+  6: $scale-6,
+  8: $scale-8,
+  10: $scale-10,
+  12: $scale-12,
+  14: $scale-14,
+  16: $scale-16
+);
+
+// Color Tokens - Indigo
+$indigo-0: #dee3ff;  // Indigo/Indigo 0
+$indigo-9: #0c1647;  // Indigo/Indigo 9
+
+// Color Map
+$indigo-map: (
+  0: $indigo-0,
+  9: $indigo-9
+);
+
+// Font Tokens - Family
+$font-family-default: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+// Font Tokens - Size
+$font-size-smallest: 12px;  // Font/Size/Smallest
+$font-size-small: 14px;     // Font/Size/Small
+$font-size-default: 16px;   // Font/Size/Default
+$font-size-h4: 22px;        // Font/Size/H4
+$font-size-h3: 24px;        // Font/Size/H3
+$font-size-h2: 30px;        // Font/Size/H2
+
+// Font Size Map
+$font-size-map: (
+  smallest: $font-size-smallest,
+  small: $font-size-small,
+  default: $font-size-default,
+  h4: $font-size-h4,
+  h3: $font-size-h3,
+  h2: $font-size-h2
+);
+
+// Font Tokens - Weight
+$font-weight-semi-bold: 600;  // Font/Weight/Semi Bold
+
+// Font Tokens - Letter Spacing
+$font-letter-spacing-default: 0;       // Font/Letter Spacing/Default
+$font-letter-spacing-tight: -0.4px;    // Font/Letter Spacing/Tight
+
+// Export as CSS Custom Properties for runtime access
+:root {
+  // Scale Tokens
+  --scale-4: #{$scale-4};
+  --scale-5: #{$scale-5};
+  --scale-6: #{$scale-6};
+  --scale-8: #{$scale-8};
+  --scale-10: #{$scale-10};
+  --scale-12: #{$scale-12};
+  --scale-14: #{$scale-14};
+  --scale-16: #{$scale-16};
+
+  // Color Tokens
+  --indigo-0: #{$indigo-0};
+  --indigo-9: #{$indigo-9};
+
+  // Font Tokens
+  --font-family-default: #{$font-family-default};
+  --font-size-smallest: #{$font-size-smallest};
+  --font-size-small: #{$font-size-small};
+  --font-size-default: #{$font-size-default};
+  --font-size-h4: #{$font-size-h4};
+  --font-size-h3: #{$font-size-h3};
+  --font-size-h2: #{$font-size-h2};
+  --font-weight-semi-bold: #{$font-weight-semi-bold};
+  --font-letter-spacing-default: #{$font-letter-spacing-default};
+  --font-letter-spacing-tight: #{$font-letter-spacing-tight};
+}
+
+/**
+ * Usage Examples:
+ * 
+ * SCSS Variables (compile-time):
+ * width: $scale-8;
+ * padding: $scale-4 $scale-6;
+ * font-size: $font-size-default;
+ * font-family: $font-family-default;
+ * color: $indigo-9;
+ * 
+ * CSS Custom Properties (runtime):
+ * width: var(--scale-8);
+ * padding: var(--scale-4) var(--scale-6);
+ * font-size: var(--font-size-default);
+ * font-family: var(--font-family-default);
+ * color: var(--indigo-9);
+ */
